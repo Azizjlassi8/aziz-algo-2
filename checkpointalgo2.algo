@@ -1,0 +1,36 @@
+ALGORITHM checkpoint algo 2
+VAR
+    set1,set2 :  array_name : ARRAY_OF integer [n] ;
+    i,j: integer;
+    summ:integer;
+    found:BOOLEAN;
+BEGIN
+    i=0
+    j=0
+    FOR i FROM 0 TO set1.length STEP step 1 DO
+    FOR j FROM 0 TO set2.length STEP step 1  DO
+        IF (set1[i]=set2[j]) THEN
+        found=false
+        break;
+        i=i+1
+        j=j+1
+        ELSE
+            summ=summ+set1[i]
+        END_IF
+
+        END_IF
+    END_FOR
+    END_FOR
+    FOR j FROM 0 TO set2.length STEP  1  DO
+    FOR i FROM 0 TO set1.length STEP 1  DO
+    IF (set2[j]=set1[i]) THEN
+    found=fals
+    break;
+    ELSE
+    summ=summ+set2[j]
+    END_IF
+END_FOR
+        
+    END_FOR
+    write(summ)
+END
